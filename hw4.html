@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="CCSF CNIT 131H: Intro to HTML & CSS">
+	<title>HTML & CSS HW 4</title>
+    <style>
+        #main-header{
+            text-align: center;
+            background: hsla(120,100%,25%,0.3);
+            color: darkblue;
+            padding: 10px;
+        }
+        #main-footer{
+            text-align: center;
+            font-size: 18px;
+        }
+		table, th, td {
+			border:  1px solid black;
+			border-collapse: collapse;
+		}
+    </style>
+</head>
+<body>
+	<!-- ordered or unordered list presenting 3 links -->
+	<header id="main-header"><h1>CNIT 131H Homework 4</h1></header>
+	<section>
+		<h2>About Author's Background</h2>
+		<p>Angel came to San Francisco as an immigrant as a young age with my parents and my 3 sibblings.  Growing up in a poor family, I've learned to work hard in school and at work.  I got BS degress in <b>Computer Science</b> at <a href="https://www.sfsu.edu/" target="_blank">SFSU</a> more than 2 decades ago.  I have been working as a <b>Software Quality Engineer</b> for around 20 years.  Therefore, I am at the point of exploring new career</p>
+	    <hr>
+		<article>
+			<h3>Things That Keep My Busy</h3>
+			<p>Besides working full time with schedule 6:30am to 3:00pm as Gardener Apprentice, I would need to work on the following:</p>
+			<ul>
+				<li>Complete 4 required Horticulture <b>evening</b> courses at <a href="http://www.ccsf.edu/" target="_blank">San Francisco City College</a> within 2 years for Gardener Apprentice Program</li>
+				<li>Learn HTML &amp; CSS Summer 2022, <a href="index.html">see my first html page.</a></li>
+				<li>Shopping for good deals at <a href="https://www.costco.com/">Costco</a></li>
+			</ul>
+		</article>
+		<hr>
+		<article>
+			<h3>My Note For HTML &amp; CSS Lists</h3>
+			<p>In HTML there are 3 different types of list.  Below you will find the list name with a brief defition, and its usage.</p>
+			<table>
+				<tr>
+					<th>Lists</th>
+					<th>Usage</th>
+				</tr>	
+				<tr>
+					<td><b>Unodered List</b>
+					</td>
+					<td>
+					Displays each item in bullet list.<br>
+						&lt;ul&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;li&gt;item 1&lt;/li&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;li&gt;item 2&lt;/li&gt;<br>
+						&lt;/ul&gt;
+					</td>
+				</tr>
+				<tr>
+					<td><b>Ordered List</b>
+					</td>
+					<td>
+					Displays each item in pair list, used for glossary, vocabulary, question &amp; answers, etc.<br>
+						&lt;ol&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;li&gt;item 1&lt;/li&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;li&gt;item 2&lt;/li&gt;<br>
+						&lt;/ol&gt;
+					</td>
+				</tr>
+				<tr>
+					<td><b>Definition List</b>
+					</td>
+					<td>
+					Displays each item in number list.<br>
+						&lt;dl&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;dt&gt;Term 1&lt;/dt&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Definition 1&lt;/dd&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;dt&gt;Term 2&lt;/dt&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;Definition 2&lt;/dd&gt;<br>
+						&lt;/dl&gt;
+					</td>
+				</tr>
+			</table>
+			<br>
+		</article>
+		<hr>
+		<article>
+			<h3>What I Do For Fun</h3>
+			<p>In order to balance work, study, and life, I would play Pokemon Go.  Below is my buddy who brought me gifts/souvenir every now and then.</p>
+			 <figure>
+                <img src="images/CharizardBuddy.jpeg" alt="Pokemon Go Charizard" width="360" height="397">
+                <figcaption>Taken From Angel's cellphone</figcaption>
+            </figure>
+		</article>
+	</section>
+	<hr>
+    <aside>
+        <h2>Web Design Acronyms</h2>
+        <p>Below are some computer acronyms.</p>
+        <dl>
+            <dt><em>HTML</em></dt><dd>HyperText Markup Language is the standard markup language for documents designed to be displayed in a web browser.</dd>
+            <dt><em>CSS</em></dt><dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.</dd>
+            <dt><em>FTP</em></dt><dd>File Transfer Protocol is a standard communication protocol used for the transfer of computer files from a server to a client on a computer network. FTP is built on a client–server model architecture using separate control and data connections between the client and the server.</dd>
+            <dt><em>SSH</em></dt><dd>Secure Socket Shell is a cryptographic network protocol for operating network services securely over an unsecured network. Its most notable applications are remote login and command-line execution.</dd>
+        </dl>
+    </aside>
+    <br>
+	<footer id="main-footer">
+		<p><strong>Copyright &copy; 2022</strong> | CNIT 131H | Designed by Angel Chung </p>
+	</footer>
+</body>
+</html>
