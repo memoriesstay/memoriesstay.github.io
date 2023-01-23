@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="description" content="Into Angel's Thoughts">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Angel's World</title>
-    <style type="text/css">
+  <title>CNIT 133 Projects</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
         #main-header{
             text-align: center;
-            background: black;
+            background: rgb(216, 196, 14);
             color: white;
             padding: 10px;
         }
@@ -16,70 +18,49 @@
             text-align: center;
             font-size: 18px;
         }
+        span { font-size: 200%; }
     </style>
 </head>
-<body>
-	<header id="main-header"><h1>Into My World</h1></header>
-	<main>
-		<section><h2>My Son's Wishes</h2>
-	        <article class="post">
-	        	<p>My oldest son, <strong>Derek</strong>, loves <strong>cats</strong> for some reason.  He always <em>nags</em> about getting a pet cat, and never give up on requesting to have one.  This is the kitten he would love to have.  But since I know him so well, I don't think he is capable to take care of any pet, not to mention to take care of himself.</p>
-	            <a href="https://freecatphotoapp.com"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Krhw930z1QDtq-TL7WnF4vpUb5L5gd4lll36vbb72E8yt2sY31PtZMCuWOXSyaqIY6o&usqp=CAU"></a>
-	            <br>
-				<small>Posted by Angel on June 19</small></p>
-				<p>Click here to view more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a>.</p>
-	        </article>
-	        <hr>
-			<article class="post">
-	            <h2>Cat Lists</h2>
-	            <p>It's interesting to know a bit about cats although I haven't given in to own one yet.</p>
-				<h3>Things cats love:</h3>
-				<p>The list below is just a sample list.  Everyone knows cats love more than the listing below.</p>
-				<ul>
-					<li>Cat Nip</li>
-					<li>Laser Pointers</li>
-					<li>Freedom</li>
-				</ul>
-				<figure><img src="https://m.media-amazon.com/images/I/41AjV2ZWCBL._SL500_.jpg" width="15%" height="15%">
-					<figcaption>Cats <em>love</em> Freedom.</figcaption>
-				</figure>
-	        </article>
-	        <hr>
-	        <article>
-	        	<h2>Cat Survey</h2>
-	        	<p>If you have cat as pet, fill out the survey below.  
-	        	<br>This survey will give more insight on cats' overall personalities, and whether they love to destroy home furnitures as mentioned by a few of my coworkers.
-	        	</p>
-				<form action="https://freecatphotoapp.com/submit-cat-photo">
-					<fieldset>
-						<legend>Is your cat an indoor or outdoor cat?</legend>
-						<label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-						<label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
-					</fieldset>
-					<br>
-					<fieldset>
-						<legend>What's your cat's personality?</legend>
-						<input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
-						<input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
-						<input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
-					</fieldset>
-					<br>
-					<fieldset>
-						<legend>Does your cat destroy your beloved furnitures?</legend>
-						<label><input id="yes" type="radio" name="is-troublesome" value="yes" checked> Yes</label>
-						<label><input id="no" type="radio" name="is-troublesome" value="no"> No</label>
-					</fieldset>
-					<br>
-					<input type="text" name="catphotourl" placeholder="cat photo URL" required>
-					<button type="submit">Submit</button>
-				</form>
-	        </article>
-		</section>
+<body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
 
-	</main>
-	<footer id="main-footer">
-		<p><strong>Copyright &copy; 2022</strong>, Angel Chung</p>
-	</footer>
+<div class="jumbotron text-center">
+    <header id="main-header"><h1>CCSF Programming Projects</h1></header>
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Author's Background</h2>
+      <p>
+        <span>M</span>y name is Angel.  I immigrated to San Francisco with my family when I was around 11 years old.  Learning English and Math from zero ground up.  
+        I managed to graduate High School passing Calculus class and Calculus AP exam.  I graduated with BS major in Computer Science at SFSU in 1998.
+    </p>
+    </div>
+
+    <div class="col-sm-6">
+      <h2>The ME Time</h2>        
+      <p>
+        <span>B</span>esides work and family.  I manage my health through 10 minutes yoga, and a mile jog in the morning.  At night, I either would spend a little time doing homework.  Only after that
+        if there are still some time left, I would play some games, and/or watch Chinese or Korean drama.
+    </p>
+    </div>
+
+  </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Work Life</h2>
+            <p>
+            <span>M</span>y career journey started with a startup company called Evolve Software as Software Quality Assurance Engineer.  My experience grew from White Box Testing, to Blackbox Testing.
+            With this company, I've gained not only testing skills, but also technical.  I was in charge of server setup and installation, database management, and perforce admin.
+            Another chapter of my career journey was with Moody's.  My skills grew to managing new development projects and offshore resources.  I helped developing test plan, test cases,
+            and executing them.  I handled web API and UI automations, as well as manual testing.
+            Currently, I am working with the goverment sector, City and County of San Francisco.  I am providing some IT support, and fully working with Vendor development team on migrating features
+            and functionalities of a twenty years old system into a new CMS system with modern technology, better performance, and enhanced usabilties.
+        </p>
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>
