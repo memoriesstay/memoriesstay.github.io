@@ -56,16 +56,16 @@
             document.getElementById("msg").innerHTML = errMsg;
           }
           else {  
-            val1 = parseInt(input1);
-            val2 = parseInt(input2);
-            val3 = parseInt(input3);
+            // val1 = parseInt(input1);
+            // val2 = parseInt(input2);
+            // val3 = parseInt(input3);
             //Calculation
-            total = val1 + val2 + val3;
+            total = input1 + input2 + input3;
             // alert("input values: " + val1 + ", " + val2 + ", " + val3);
-            product = val1 * val2 * val3;
+            product = input1 * input2 * input3;
             avgNum = (total/3).toFixed(2);
-            minNum = Math.min(val1, val2, val3);
-            maxNum = Math.max(val1, val2, val3);
+            minNum = Math.min(input1, input2, input3);
+            maxNum = Math.max(input1, input2, input3);
             //Display Result
             document.getElementById("total").innerHTML = total;
             document.getElementById("product").innerHTML = product;
