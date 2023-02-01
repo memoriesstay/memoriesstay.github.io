@@ -56,22 +56,22 @@
             document.getElementById("msg").innerHTML = errMsg;
           }
           else {  
-            // val1 = parseInt(input1);
-            // val2 = parseInt(input2);
-            // val3 = parseInt(input3);
+            val1 = Number(input1);
+            val2 = Number(input2);
+            val3 = Number(input3);
             //Calculation
-            total = input1 + input2 + input3;
+            total = val1 + val2 + val3;
             // alert("input values: " + val1 + ", " + val2 + ", " + val3);
-            product = input1 * input2 * input3;
-            avgNum = (total/3).toFixed(2);
-            minNum = Math.min(input1, input2, input3);
-            maxNum = Math.max(input1, input2, input3);
+            product = val1 * val2 * val3;
+            avgNum = total/3;
+            minNum = Math.min(val1, val2, val3);
+            maxNum = Math.max(val1, val2, val3);
             //Display Result
-            document.getElementById("total").innerHTML = total;
-            document.getElementById("product").innerHTML = product;
-            document.getElementById("average").innerHTML = avgNum;
-            document.getElementById("minResult").innerHTML = minNum;
-            document.getElementById("maxResult").innerHTML = maxNum;
+            document.getElementById("total").innerHTML = total.toFixed(2);
+            document.getElementById("product").innerHTML = product.toFixed(2);
+            document.getElementById("average").innerHTML = avgNum.toFixed(2);
+            document.getElementById("minResult").innerHTML = minNum.toFixed(2);
+            document.getElementById("maxResult").innerHTML = maxNum.toFixed(2);
         }
       }
       function resetResult()
