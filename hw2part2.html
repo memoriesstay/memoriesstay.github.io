@@ -31,69 +31,69 @@
         box-sizing: border-box;
       }
       input[type=number]:focus {
-        background-color: rgb(104, 204, 142);
+        background-color: rgb(233, 209, 159);
       }
     </style>
-  </head>
-  <script>
-    function process()
-    {
-        var val1, val2, val3, input1, input2, input3, product, total, minNum, maxNum, avgNum, errMsg;
+    <script>
+      function process()
+      {
+          var val1, val2, val3, input1, input2, input3, product, total, minNum, maxNum, avgNum, errMsg;
 
-        resetResult(); //Reset results
+          resetResult(); //Reset results
 
-          $("#total").fadeTo("slow", 1);
-          $("#product").fadeTo("slow", 1);
-          $("#average").fadeTo("slow", 1);
-          $("#minResult").fadeTo("slow", 1);
-          $("#maxResult").fadeTo("slow", 1);
+            $("#total").fadeTo("slow", 1);
+            $("#product").fadeTo("slow", 1);
+            $("#average").fadeTo("slow", 1);
+            $("#minResult").fadeTo("slow", 1);
+            $("#maxResult").fadeTo("slow", 1);
 
-        // Read in the 3 numbers
-        input1 = document.forms["entryform"].elements["input1"].value;
-        input2 = document.forms["entryform"].elements["input2"].value;
-        input3 = document.forms["entryform"].elements["input3"].value;
-        if (input1 == null || input1 == "" || input2 == null || input2 == "" || input3 == null || input3 == "") {
-          errMsg = "Run Error: One or more values not enter.  Please make sure all fields are enter.";
-          document.getElementById("msg").innerHTML = errMsg;
+          // Read in the 3 numbers
+          input1 = document.forms["entryform"].elements["input1"].value;
+          input2 = document.forms["entryform"].elements["input2"].value;
+          input3 = document.forms["entryform"].elements["input3"].value;
+          if (input1 == null || input1 == "" || input2 == null || input2 == "" || input3 == null || input3 == "") {
+            errMsg = "Run Error: One or more values not enter.  Please make sure all fields are enter.";
+            document.getElementById("msg").innerHTML = errMsg;
+          }
+          else {  
+            val1 = parseInt(input1);
+            val2 = parseInt(input2);
+            val3 = parseInt(input3);
+            //Calculation
+            total = val1 + val2 + val3;
+            // alert("input values: " + val1 + ", " + val2 + ", " + val3);
+            product = val1 * val2 * val3;
+            avgNum = (total/3).toFixed(2);
+            minNum = Math.min(val1, val2, val3);
+            maxNum = Math.max(val1, val2, val3);
+            //Display Result
+            document.getElementById("total").innerHTML = total;
+            document.getElementById("product").innerHTML = product;
+            document.getElementById("average").innerHTML = avgNum;
+            document.getElementById("minResult").innerHTML = minNum;
+            document.getElementById("maxResult").innerHTML = maxNum;
         }
-        else {  
-          val1 = parseInt(input1);
-          val2 = parseInt(input2);
-          val3 = parseInt(input3);
-          //Calculation
-          total = val1 + val2 + val3;
-          // alert("input values: " + val1 + ", " + val2 + ", " + val3);
-          product = val1 * val2 * val3;
-          avgNum = (total/3).toFixed(2);
-          minNum = Math.min(val1, val2, val3);
-          maxNum = Math.max(val1, val2, val3);
-          //Display Result
-          document.getElementById("total").innerHTML = total;
-          document.getElementById("product").innerHTML = product;
-          document.getElementById("average").innerHTML = avgNum;
-          document.getElementById("minResult").innerHTML = minNum;
-          document.getElementById("maxResult").innerHTML = maxNum;
       }
-    }
-    function resetResult()
-    {
-      document.getElementById("msg").innerHTML = "";
-      document.getElementById("total").innerHTML = "";
-      document.getElementById("product").innerHTML = "";
-      document.getElementById("average").innerHTML = "";
-      document.getElementById("minResult").innerHTML = "";
-      document.getElementById("maxResult").innerHTML = "";
-    }
-    $(document).ready(function(){
-      $("#btn1").click(function(){
-        $("#total").fadeTo("slow", 0.15);
-        $("#product").fadeTo("slow", 0.15);
-        $("#average").fadeTo("slow", 0.15);
-        $("#minResult").fadeTo("slow", 0.15);
-        $("#maxResult").fadeTo("slow", 0.15);
+      function resetResult()
+      {
+        document.getElementById("msg").innerHTML = "";
+        document.getElementById("total").innerHTML = "";
+        document.getElementById("product").innerHTML = "";
+        document.getElementById("average").innerHTML = "";
+        document.getElementById("minResult").innerHTML = "";
+        document.getElementById("maxResult").innerHTML = "";
+      }
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+          $("#total").fadeTo("slow", 0.15);
+          $("#product").fadeTo("slow", 0.15);
+          $("#average").fadeTo("slow", 0.15);
+          $("#minResult").fadeTo("slow", 0.15);
+          $("#maxResult").fadeTo("slow", 0.15);
+        });
       });
-    });
-</script>
+    </script>
+  </head>
   <body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
     <div class="jumbotron text-center">
       <header id="main-header">
@@ -105,7 +105,14 @@
         <a class="navbar-brand">CNIT 133</a>
         <ul class="nav navbar-nav">
           <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="hw2.html">Homework 2</a></li>
+          <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw2.html">Homework 2<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="hw2.html">HW2 Main</a></li>
+              <li><a href="hw2part1.html">HW2 Part 1</a></li>
+              <li><a href="hw2part2.html">HW2 Part 2</a></li>
+              <li><a href="hw2part3.html">HW2 Part 3</a></li>
+            </ul>
+          </li>
           <li><a href="hw3.html">Homework 3</a></li>
           <li><a href="hw4.html">Homework 4</a></li>
           <li><a href="hw5.html">Homework 5</a></li>
@@ -120,8 +127,10 @@
         <h2>Part 2: Data Analysis</h2> 
         <a href="hw2.html" class="btn btn-info" role="button">HW2 Main</a>
         <a href="hw2part1.html" class="btn btn-info" role="button">HW2 Part 1</a>
+        <a href="hw2part2.html" class="btn btn-info active" role="button">HW2 Part 2</a>
+        <a href="hw2part3.html" class="btn btn-info" role="button">HW2 Part 3</a>
         <div class="panel panel-primary">
-          <div class="panel-heading"><h2>User Input</h2></div>
+          <div class="panel-heading"><h3>User Input</h3></div>
           <div class="panel-body">
             <p>Enter 3 numbers, then click on Calculate to view result</p>
 
@@ -139,12 +148,13 @@
                   <input type="number" class="form-control" id="input3" placeholder="Enter a number" >
               </div>
               <button type="button" class="btn btn-primary" onclick="process()">Calculate</button>
-              <button type="reset button" class="btn btn-outline-secondary" onclick="resetResult()">Reset</button>
+              <!-- <button type="reset button" class="btn btn-outline-secondary" onclick="resetResult()">Reset</button> -->
+              <button type="reset" class="btn btn-outline-secondary" onclick="resetResult()">Reset</button>              
             </form>
           </div>
         </div>
         <div class="panel panel-info">
-          <div class="panel-heading"><h2>Run Result</h2></div>
+          <div class="panel-heading"><h3>Run Result</h3></div>
           <div class="panel-body">
             <p id="msg" class="bg-danger"></p>
             <dl class="dl-horizontal">
@@ -159,7 +169,7 @@
               <dt>Largest Value: </dt>
                 <dd id="maxResult"></dd>
             </dl>
-            <button id="btn1">Fade Result</button>
+            <button id="btn1" class="btn btn-danger">Fade Result</button>
           </div>
         </div>
       </div>

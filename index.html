@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<title>CNIT 133 Projects</title>
 	<meta charset="utf-8">
@@ -10,36 +9,43 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<style>
-	#main-header {
+		#main-header {
 		text-align: center;
 		background: rgb(216, 196, 14);
 		color: white;
 		padding: 10px;
-	}
-	
-	#main-footer {
+		}
+
+		#main-footer {
 		text-align: center;
 		font-size: 18px;
-	}
-	
-	span {
-		font-size: 200%;
-	}
+		}
+
+		span {
+		font-size: 160%;
+		}
 	</style>
 </head>
-
 <body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
 	<div class="jumbotron text-center">
 		<header id="main-header">
-			<h1>CCSF Programming Projects</h1></header>
+		<h1>CCSF Programming Projects</h1></header>
 	</div>
+	<!-- Navigation Header -->
 	<nav class="navbar navbar-default">
 		<div class="container-fluid navbar-header">
-            <a class="navbar-brand">CNIT 133</a>
+			<a class="navbar-brand">CNIT 133</a>
 			<!-- <div class="navbar-header"> <a class="navbar-brand">CNIT 133</a> </div> -->
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="hw2.html">Homework 2</a></li>
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw2.html">Homework 2<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="hw2.html">HW2 Main</a></li>
+						<li><a href="hw2part1.html">HW2 Part 1</a></li>
+						<li><a href="hw2part2.html">HW2 Part 2</a></li>
+						<li><a href="hw2part3.html">HW2 Part 3</a></li>
+					</ul>
+				</li>
 				<li><a href="hw3.html">Homework 3</a></li>
 				<li><a href="hw4.html">Homework 4</a></li>
 				<li><a href="hw5.html">Homework 5</a></li>
@@ -50,35 +56,34 @@
 		</div>
 	</nav>
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-6">
-				<h2>Author's Background</h2>
-				<p> <span>M</span>y name is Angel Chung. My family and I immigrated to the United States when I was 11 years old. I learned to not only speak English, but comprehend mathematics from the ground up. I graduated from the San Francisco public High School system with Advanced Placement in Calculus. Afterwards, I attended San Francisco State University and earned a Bachelor's degree in Computer Science.</p>
+		<div class="panel-group">
+			<div class="panel panel-info">
+				<div class="panel-heading"><h3>Author's Background</h3></div>
+				<div class="panel-body"><p> <span>M</span>y name is Angel Chung. My family and I immigrated to the United States when I was 11 years old. I learned to not only speak English, but comprehend mathematics from the ground up. I graduated from the San Francisco public High School system with Advanced Placement in Calculus. Afterwards, I attended San Francisco State University and earned a Bachelor's degree in Computer Science.</p></div>
 			</div>
-			<div class="col-sm-6">
-				<h2>The ME Time</h2>
-				<p> <span>A</span>longside family and profession, my physical and mental well being is managed through an early morning session of yoga and running. My evening routine consists of continuing education before a dedicated window of entertainment before bed.</p>
+			<div class="panel panel-primary">
+				<div class="panel-heading"><h3>Work Life</h3></div>
+				<div class="panel-body">
+					<p> <span>M</span>y professional career began as a Quality Assurance Engineer with Evolve Software. 
+						My experience began with this firm in White Box Testing, and progressed into Black Box Testing.  
+						This experience provided valuable technical and testing skills. Ultimately, I was placed in charge 
+						of server setup and installation. Additional responsibilities included database management and Perforce administration.  					
+						Moving forward from Evolve Software, the next chapter of my career began with Moody's Analytics. 
+						My skill set developed into project management and offshore resources, as well as executing test cases and planning. 
+						Furthermore, my experience at this firm enabled the opportunity to manage Web API and UI automations alongside 
+						manual testing.<br>
+						<span>C</span>urrently, I provide IT support in addition to vendor development assistance with The City and County of San Francisco. 
+						My primary role is to merge features and functionality of a much needed upgrade from the past, into an entirely new 
+						CMS system with modern features, better performance and enhanced usability. 
+					</p>
+				</div>
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<h2>Work Life</h2>
-				<p> <span>M</span>y professional career began as a Quality Assurance Engineer with Evolve Software. 
-					My experience began with this firm in White Box Testing, and progressed into Black Box Testing.  
-					This experience provided valuable technical and testing skills. Ultimately, I was placed in charge 
-					of server setup and installation. Additional responsibilities included database management and Perforce administration.  					
-					Moving forward from Evolve Software, the next chapter of my career began with Moody's Analytics. 
-					My skill set developed into project management and offshore resources, as well as executing test cases and planning. 
-					Furthermore, my experience at this firm enabled the opportunity to manage Web API and UI automations alongside 
-					manual testing.<br>
-					Currently, I provide IT support in addition to vendor development assistance with The City and County of San Francisco. 
-					My primary role is to merge features and functionality of a much needed upgrade from the past, into an entirely new 
-					CMS system with modern features, better performance and enhanced usability. 
-				</p>
+			<div class="panel panel-default">
+				<div class="panel-heading"><h3>The ME Time</h3></div>
+				<div class="panel-body"><p> <span>A</span>longside family and profession, my physical and mental well being is managed through an early morning session of yoga and running. My evening routine consists of continuing education before a dedicated window of entertainment before bed.</p></div>
 			</div>
 		</div>
 	</div>
 
 </body>
-
 </html>
