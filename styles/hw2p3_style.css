@@ -1,0 +1,23 @@
+#main-header {
+    text-align: center;
+    background: rgb(216, 196, 14);
+    color: white;
+    padding: 10px;
+}
+
+#main-footer {
+    text-align: center;
+    font-size: 18px;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #afb0eb;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 10px;
+    display: none;
+}

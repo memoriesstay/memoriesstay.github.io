@@ -1,0 +1,26 @@
+      #main-header {
+        text-align: center;
+        background: rgb(216, 196, 14);
+        color: white;
+        padding: 10px;
+      }
+
+      #main-footer {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      span {
+        font-size: 200%;
+      }
+
+      input[type=number] {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      
+      input[type=number]:focus {
+        background-color: rgb(233, 209, 159);
+      }

@@ -1,0 +1,15 @@
+#main-header {
+    text-align: center;
+    background: rgb(216, 196, 14);
+    color: white;
+    padding: 10px;
+  }
+
+  #main-footer {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* span {
+    font-size: 200%;
+  } */
