@@ -44,13 +44,13 @@
           </ul>
         </li>
         <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw3.html">Homework 3<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="hw3.html">HW3 Main</a></li>
-                <li><a href="hw3part1.html">HW3 Part 1</a></li>
-                <li><a href="hw3part2.html">HW3 Part 2</a></li>
-                <li><a href="hw3part3.html">HW3 Part 3</a></li>
-                <li><a href="hw3part4.html">HW3 Part 4</a></li>
-            </ul>
+          <ul class="dropdown-menu">
+              <li><a href="hw3.html">HW3 Main</a></li>
+              <li><a href="hw3part1.html">HW3 Part 1</a></li>
+              <li><a href="hw3part2.html">HW3 Part 2</a></li>
+              <li><a href="hw3part3.html">HW3 Part 3</a></li>
+              <li><a href="hw3part4.html">HW3 Part 4</a></li>
+          </ul>
         </li>
         <li><a href="hw4.html">Homework 4</a></li>
         <li><a href="hw5.html">Homework 5</a></li>
@@ -63,23 +63,45 @@
 
   <!-- MAIN Body Content -->
   <main class="container panel-group">
-    <section class="panel panel-info">
-      <div class="panel-heading"><h3>Functions</h3></div>
-      <div class="panel-body">
-        <p>Homework 3 contains three required parts and an extra credit.</p>
-        <dl>
-          <dt><a href="hw3part1.html" class="btn btn-info" role="button">HW3 Part 1</a></dt>
-            <dd><p>Calculates the Final Score and Letter Grade base on user input of Student Homework Average score, Mid-Term Exam, Final Exam, and Participation score.</p></dd>
-          <dt><a href="hw3part2.html" class="btn btn-info" role="button">HW3 Part 2</a></dt>
-            <dd><p>Calculate a Seller's commission and earning for the week base on seller's total amount sold.  Jquery is used to display tooltip message on mouseover on the Seller's Name input.</p></dd>
-          <dt><a href="hw3part3.html" class="btn btn-info" role="button">HW3 Part 3</a></dt>
-            <dd><p>Performs temperature conversion between Farenheit to Celcius, or Celcius to Farenheit base on user input on temperature value.</p></dd>
-          <dt><a href="hw3part4.html" class="btn btn-info" role="button">HW3 Part 4</a></dt>
-            <dd><p>Generates 2 random numbers between 0 and 9, to use as Math Multiplication Game.  User will be asked "How much is X time Y?".  User's response will be validated.</p></dd>
-        </dl>
+    
+    <nav id="top">
+      <a href="hw3.html" class="btn btn-primary" role="button">Main</a>
+      <a href="hw3part1.html" class="btn btn-primary" role="button">Part 1</a>
+      <a href="hw3part2.html" class="btn btn-primary" role="button">Part 2</a>
+      <a href="hw3part3.html" class="btn btn-primary active" role="button">Part 3</a>
+      <a href="hw3part4.html" class="btn btn-primary" role="button">Part 4</a>
+    </nav><br><br>
 
-      </div>
-    </section>
+    <section id="part3" class="panel panel-primary">
+        <div class="panel-heading">
+          <h3>Part 3: Temperature Conversion</h3>
+        </div>
+        <div class="panel-body">
+          <p>This page contains script that will take user input of temperature, and perform coversion between Farenheit to Celcius, or Celcius to Farenheit.</p>
+          <form id="temperature" name="temperature">
+            <h4><strong>Temperature Input</strong></h4>
+            <p id="msgtemp" class="bg-danger"></p>
+            <table>
+              <tr>
+                <td><label class="col-sm-4" for="tempval">Temperature</label></td>
+                <td><input type="number" class="form-control col-sm-5" id="tempval" name="tempval" placeholder="Temperature" autofocus></td>
+              </tr>
+            </table>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="calculateCelcius()">Farenheit to Celcius</button>
+            <button type="button" class="btn btn-success" onclick="calculateFarenhait()">Celcius to Farenheit</button>
+            <button type="reset" class="btn btn-outline-secondary" onclick="resetTemperature()">Clear Result</button>
+            
+            <hr class="green">
+            <div class="form-group">
+              <label for="textresult">Conversion Result</label>
+              <textarea class="form-control" id="textresult" rows="2" readonly></textarea>
+            </div>
+  
+          </form>
+  
+        </div>
+      </section> <br>
   </main>
 </body>
 

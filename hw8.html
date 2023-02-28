@@ -6,36 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Homework 8 for JavaScript, jQuery, AJAX course at CCSF">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-      #main-header {
-        text-align: center;
-        background: rgb(216, 196, 14);
-        color: white;
-        padding: 10px;
-      }
-
-      #main-footer {
-        text-align: center;
-        font-size: 18px;
-      }
-
-      span {
-        font-size: 200%;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/hw2_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
   </head>
   <body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
-    <div class="jumbotron text-center">
-      <header id="main-header">
-        <h1>CNIT 133 Homework 8</h1>
-      </header>
-    </div>
+    <!-- Header Section -->
+    <header class="jumbotron text-center" id="main-header">
+      <h1>CNIT 133 Homework 8</h1>
+    </header>
+ 
+    <!-- Nav Section -->
     <nav class="navbar navbar-default">
       <div class="container-fluid navbar-header">
+        <!-- Small window side collapsing menu -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>    
+        </button>
         <a class="navbar-brand">CNIT 133</a>
-        <ul class="nav navbar-nav">
+        <ul class="collapse navbar-collapse nav navbar-nav" id="myNavbar">
           <li><a href="index.html">Home</a></li>
           <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw2.html">Homework 2<span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -45,7 +36,15 @@
               <li><a href="hw2part3.html">HW2 Part 3</a></li>
             </ul>
           </li>
-          <li><a href="hw3.html">Homework 3</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw3.html">Homework 3<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="hw3.html">HW3 Main</a></li>
+                <li><a href="hw3part1.html">HW3 Part 1</a></li>
+                <li><a href="hw3part2.html">HW3 Part 2</a></li>
+                <li><a href="hw3part3.html">HW3 Part 3</a></li>
+                <li><a href="hw3part4.html">HW3 Part 4</a></li>
+            </ul>
+          </li>
           <li><a href="hw4.html">Homework 4</a></li>
           <li><a href="hw5.html">Homework 5</a></li>
           <li><a href="hw6.html">Homework 6</a></li>
@@ -54,7 +53,9 @@
         </ul>
       </div>
     </nav>
-    <div class="container">
+
+    <!-- MAIN Body Content -->
+    <main class="container">
       <div class="panel-group">
         <div class="panel panel-primary">
           <div class="panel-heading"><h3>Coming Soon</h3></div>
@@ -65,6 +66,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>

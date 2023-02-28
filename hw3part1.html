@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CNIT 133 HW3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Homework 3 for JavaScript, jQuery, AJAX course at CCSF">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/hw3_style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+  <script src="jquery-validation-1.19.5/lib/jquery-1.11.1.js" defer></script>
+  <script src="jquery-validation-1.19.5/dist/jquery.validate.js" defer></script>
+  <!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js" defer></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" defer></script> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
+  <script src="scripts/hw3part1_script.js" defer></script>
+</head>
+
+<body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
+  <!-- Header Section -->
+  <header class="jumbotron text-center" id="main-header">
+    <h1>CNIT 133 Homework 3 - Functions</h1>
+  </header>
+
+  <!-- Nav Section -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid navbar-header">
+      <!-- Small window side collapsing menu -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">CNIT 133</a>
+      <ul class="collapse navbar-collapse nav navbar-nav" id="myNavbar">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw2.html">Homework 2<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="hw2.html">HW2 Main</a></li>
+            <li><a href="hw2part1.html">HW2 Part 1</a></li>
+            <li><a href="hw2part2.html">HW2 Part 2</a></li>
+            <li><a href="hw2part3.html">HW2 Part 3</a></li>
+          </ul>
+        </li>
+        <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw3.html">Homework 3<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="hw3.html">HW3 Main</a></li>
+              <li><a href="hw3part1.html">HW3 Part 1</a></li>
+              <li><a href="hw3part2.html">HW3 Part 2</a></li>
+              <li><a href="hw3part3.html">HW3 Part 3</a></li>
+              <li><a href="hw3part4.html">HW3 Part 4</a></li>
+          </ul>
+        </li>
+        <li><a href="hw4.html">Homework 4</a></li>
+        <li><a href="hw5.html">Homework 5</a></li>
+        <li><a href="hw6.html">Homework 6</a></li>
+        <li><a href="hw7.html">Homework 7</a></li>
+        <li><a href="hw8.html">Homework 8</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN Body Content -->
+  <main class="container panel-group">
+    
+    <nav id="top">
+      <a href="hw3.html" class="btn btn-primary" role="button">Main</a>
+      <a href="hw3part1.html" class="btn btn-primary active" role="button">Part 1</a>
+      <a href="hw3part2.html" class="btn btn-primary" role="button">Part 2</a>
+      <a href="hw3part3.html" class="btn btn-primary" role="button">Part 3</a>
+      <a href="hw3part4.html" class="btn btn-primary" role="button">Part 4</a>
+    </nav><br>
+
+    <section id="part1" class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Part 1: Student Grades</h3>
+      </div>
+      <div class="panel-body">
+        <p>This program will take in Student's earned scores and perform calculation to get Student's Final Average Score and Student's Letter Grade.</p><br>
+
+        <form id="studentgrade" name="studentgrade">
+          <h4><strong>Student's Scores Input</strong></h4>
+          <p id="msggrade" class="bg-danger"></p>
+          <div class="form-group">
+            <label class="control-label" for="hwavg">Homework Average</label>
+            <input type="number" min="0" max="100" class="form-control active" id="hwavg" name="hwavg" placeholder="Input Score" autofocus>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="mexam">Mid-Term Exam Score</label>
+            <input type="number" class="form-control" id="mexam" min="0" max="100" name="mexam" placeholder="Input Score">
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="fexam">Final Exam Score</label>
+            <input type="number" class="form-control" id="fexam" name="fexam" min="0" max="100" placeholder="Input Score">
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="participation">Participation</label>
+            <input type="number" class="form-control" id="participation" name="participation" min="0" max="100" placeholder="Input Score">
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" onclick="calculateGrade()">Calculate</button>
+            <button type="reset" class="btn btn-outline-secondary" onclick="document.location.reload()">Clear Result</button>
+          </div>
+          <div class="form-group">
+            <!-- <button type="reset" class="btn btn-outline-secondary" onclick="resetResult()">Clear Result</button> -->
+            <hr class="green">
+            <h4><strong>Calculated Result</strong></h4>
+            <p>
+              <label for="fscore">Final Score</label>
+              <input type="number" class="form-control" id="fscore" min="0" max="100" readonly>
+             </p>
+            <p>
+              <label for="fgrade">Final Grade</label>
+              <input type="text" size="50" class="form-control" id="fgrade" readonly>
+            </p>
+          </div>
+
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

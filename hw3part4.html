@@ -14,10 +14,10 @@
   <!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js" defer></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" defer></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
-  <script src="scripts/hw3_script.js" defer></script>
+  <script src="scripts/hw3part4_script.js" defer></script>
 </head>
 
-<body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
+<body onload="generateNumbers()" style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
   <!-- Header Section -->
   <header class="jumbotron text-center" id="main-header">
     <h1>CNIT 133 Homework 3 - Functions</h1>
@@ -44,13 +44,13 @@
           </ul>
         </li>
         <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw3.html">Homework 3<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="hw3.html">HW3 Main</a></li>
-                <li><a href="hw3part1.html">HW3 Part 1</a></li>
-                <li><a href="hw3part2.html">HW3 Part 2</a></li>
-                <li><a href="hw3part3.html">HW3 Part 3</a></li>
-                <li><a href="hw3part4.html">HW3 Part 4</a></li>
-            </ul>
+          <ul class="dropdown-menu">
+              <li><a href="hw3.html">HW3 Main</a></li>
+              <li><a href="hw3part1.html">HW3 Part 1</a></li>
+              <li><a href="hw3part2.html">HW3 Part 2</a></li>
+              <li><a href="hw3part3.html">HW3 Part 3</a></li>
+              <li><a href="hw3part4.html">HW3 Part 4</a></li>
+          </ul>
         </li>
         <li><a href="hw4.html">Homework 4</a></li>
         <li><a href="hw5.html">Homework 5</a></li>
@@ -63,23 +63,37 @@
 
   <!-- MAIN Body Content -->
   <main class="container panel-group">
-    <section class="panel panel-info">
-      <div class="panel-heading"><h3>Functions</h3></div>
-      <div class="panel-body">
-        <p>Homework 3 contains three required parts and an extra credit.</p>
-        <dl>
-          <dt><a href="hw3part1.html" class="btn btn-info" role="button">HW3 Part 1</a></dt>
-            <dd><p>Calculates the Final Score and Letter Grade base on user input of Student Homework Average score, Mid-Term Exam, Final Exam, and Participation score.</p></dd>
-          <dt><a href="hw3part2.html" class="btn btn-info" role="button">HW3 Part 2</a></dt>
-            <dd><p>Calculate a Seller's commission and earning for the week base on seller's total amount sold.  Jquery is used to display tooltip message on mouseover on the Seller's Name input.</p></dd>
-          <dt><a href="hw3part3.html" class="btn btn-info" role="button">HW3 Part 3</a></dt>
-            <dd><p>Performs temperature conversion between Farenheit to Celcius, or Celcius to Farenheit base on user input on temperature value.</p></dd>
-          <dt><a href="hw3part4.html" class="btn btn-info" role="button">HW3 Part 4</a></dt>
-            <dd><p>Generates 2 random numbers between 0 and 9, to use as Math Multiplication Game.  User will be asked "How much is X time Y?".  User's response will be validated.</p></dd>
-        </dl>
+    
+    <nav id="top">
+      <a href="hw3.html" class="btn btn-primary" role="button">Main</a>
+      <a href="hw3part1.html" class="btn btn-primary" role="button">Part 1</a>
+      <a href="hw3part2.html" class="btn btn-primary" role="button">Part 2</a>
+      <a href="hw3part3.html" class="btn btn-primary" role="button">Part 3</a>
+      <a href="hw3part4.html" class="btn btn-primary active" role="button">Part 4</a>
+    </nav><br><br>
 
-      </div>
-    </section>
+    <section id="part4" class="panel panel-primary">
+        <div class="panel-heading">
+          <h3>Part 4: Multiplication Game</h3>
+        </div>
+        <div class="panel-body">
+          <p>This multiplication game will help you sharpen your brain cells.  Let's see if you know the answer the question below.</p>
+          <form id="mathquest" name="mathquest">
+            <div><h4>How much is <strong id="xvalue"></strong> times <strong id="yvalue"></strong>?</h4></div>
+            <p id="msgwrong" class="bg-danger"></p>
+            <p id="msgright" class="bg-success"></p>
+            <p>
+              <label for="usranswer">Your Answer</label>
+              <input type="number" class="form-control" id="usranswer" name="usranswer" placeholder="Enter Your Response" autofocus>
+            </p>
+            <br>
+            <button type="button" class="btn btn-primary" onclick="checkMathAnswer()">Submit</button>
+            <button type="reset" class="btn btn-outline-secondary" onclick="resetMath()">Clear Result</button>
+  
+          </form>
+  
+        </div>
+      </section> <br>
   </main>
 </body>
 

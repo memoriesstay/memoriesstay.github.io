@@ -6,93 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Homework 2 Basic Operation for JavaScript, jQuery, AJAX course at CCSF">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-      #main-header {
-        text-align: center;
-        background: rgb(216, 196, 14);
-        color: white;
-        padding: 10px;
-      }
-
-      #main-footer {
-        text-align: center;
-        font-size: 18px;
-      }
-
-      #panel, #flip {
-        padding: 5px;
-        text-align: center;
-        background-color: #afb0eb;
-        border: solid 1px #c3c3c3;
-      }
-
-      #panel {
-        padding: 10px;
-        display: none;
-      }
-    </style>
-    <script> 
-      function process()
-      {
-        var eurRate, cadRate, hkdRate, jpyRate, mxnRate, usValue, errMsg;
-
-        resetResult(); //Reset results
-
-        // Read in the 3 numbers
-        input1 = document.forms["entryform"].elements["usamt"].value;
-
-        if (input1 == null || input1 == "") {
-          errMsg = "Run Error: One or more values not enter.  Please make sure all fields are enter.";
-          document.getElementById("msg").innerHTML = errMsg;
-        }
-        else {  
-          usValue = Number(input1);
-          eurRate = document.getElementById("eurrate").innerHTML;
-          cadRate = document.getElementById("cadrate").innerHTML;
-          hkdRate = document.getElementById("hkdrate").innerHTML;
-          jpyRate = document.getElementById("jpyrate").innerHTML;
-          mxnRate = document.getElementById("mxnrate").innerHTML;
-
-          //Display Result
-          document.getElementById("eurval").innerHTML = (eurRate * usValue).toFixed(2);
-          document.getElementById("cadval").innerHTML = (cadRate * usValue).toFixed(2);
-          document.getElementById("hkdval").innerHTML = (hkdRate * usValue).toFixed(2);
-          document.getElementById("jpyval").innerHTML = (jpyRate * usValue).toFixed(2);
-          document.getElementById("mxnval").innerHTML = (mxnRate * usValue).toFixed(2);
-        }
-      }
-      function resetResult()
-      {
-        document.getElementById("msg").innerHTML = "";
-        document.getElementById("eurval").innerHTML = "";
-        document.getElementById("cadval").innerHTML = "";
-        document.getElementById("hkdval").innerHTML = "";
-        document.getElementById("jpyval").innerHTML = "";
-        document.getElementById("mxnval").innerHTML = "";
-      }
-      $(document).ready(function(){
-        $("#flip").click(function(){
-          $("#panel").slideToggle("slow");
-        });
-
-        $('#usamt').focus(function() {
-      		  $(this).css('background-color','antiquewhite');
-	        }); 
-      });
-      </script>
+    <link rel="stylesheet" href="styles/hw2p3_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
+    <script src="scripts/hw2p3_script.js" defer></script>
   </head>
+
   <body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
-    <div class="jumbotron text-center">
-      <header id="main-header">
-        <h1>CNIT 133 Homework 2</h1>
-      </header>
-    </div>
+    <header class="jumbotron text-center" id="main-header">
+      <h1>CNIT 133 Homework 2</h1>
+    </header>
+
+    <!-- Nav Section -->
     <nav class="navbar navbar-default">
       <div class="container-fluid navbar-header">
+        <!-- Small window side collapsing menu -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>    
+        </button>
         <a class="navbar-brand">CNIT 133</a>
-        <ul class="nav navbar-nav">
+        <ul class="collapse navbar-collapse nav navbar-nav" id="myNavbar">
           <li><a href="index.html">Home</a></li>
           <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw2.html">Homework 2<span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -102,7 +37,15 @@
               <li><a href="hw2part3.html">HW2 Part 3</a></li>
             </ul>
           </li>
-          <li><a href="hw3.html">Homework 3</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw3.html">Homework 3<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="hw3.html">HW3 Main</a></li>
+                <li><a href="hw3part1.html">HW3 Part 1</a></li>
+                <li><a href="hw3part2.html">HW3 Part 2</a></li>
+                <li><a href="hw3part3.html">HW3 Part 3</a></li>
+                <li><a href="hw3part4.html">HW3 Part 4</a></li>
+            </ul>
+          </li>
           <li><a href="hw4.html">Homework 4</a></li>
           <li><a href="hw5.html">Homework 5</a></li>
           <li><a href="hw6.html">Homework 6</a></li>
@@ -111,72 +54,71 @@
         </ul>
       </div>
     </nav>
- 
-    <div class="container">
-      <div class="panel-group">
-        <h2>Part 3: Exchanges Rates</h2> 
-        <a href="hw2.html" class="btn btn-info" role="button">HW2 Main</a>
-        <a href="hw2part1.html" class="btn btn-info" role="button">HW2 Part 1</a>
-        <a href="hw2part2.html" class="btn btn-info" role="button">HW2 Part 2</a>
-        <a href="hw2part3.html" class="btn btn-info active" role="button">HW2 Part 3</a>
-        <div class="panel panel-primary">
-          <div class="panel-heading"><h3>Monetary Exchange Rates</h3></div>
-          <div class="panel-body">
-            <div id="flip">Click Here to Show/Hide Instructions</div>
-            <div id="panel">
-              <p>The foreign exchange rates in <strong>June 2021</strong><br>
-                <strong>Enter</strong> a dollar amount in the table below to see the corresponding foreign exchange values.
-              </p>
-            </div>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Currency</th>
-                  <th>Rate</th>
-                  <th>Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Euro</td>
-                  <td id="eurrate">0.84</td>
-                  <td id="eurval"> </td>
-                </tr>
-                <tr>
-                  <td>Canadian Dollar</td>
-                  <td id="cadrate">1.23</td>
-                  <td id="cadval"> </td>
-                </tr>
-                <tr>
-                  <td>Hong Kong Dollar</td>
-                  <td id="hkdrate">7.76</td>
-                  <td id="hkdval"> </td>
-                </tr>
-                <tr>
-                  <td>Japanese Yen</td>
-                  <td id="jpyrate">110.80</td>
-                  <td id="jpyval"> </td>
-                </tr>
-                <tr>
-                  <td>Mexican Peso</td>
-                  <td id="mxnrate">19.82</td>
-                  <td id="mxnval"> </td>
-                </tr>
-              </tbody>
-            </table>
-            <form class="form-inline" name="entryform">
-              <div class="form-group">
-                <label for="usamt">Enter Amount of U.S. Dollars</label>
-                <input type="number" class="form-control active" id="usamt" placeholder="Enter Amount">
-              </div>
-              <button type="button" class="btn btn-primary" onclick="process()">Calculate</button>
-              <button type="reset" class="btn btn-outline-secondary" onclick="resetResult()">Reset</button>
-            </form>
-            <p id="msg" class="bg-danger"></p>             
+
+    <!-- MAIN Body Content -->
+    <main class="container panel-group">
+      <h2>Part 3: Exchanges Rates</h2> 
+      <a href="hw2.html" class="btn btn-info" role="button">HW2 Main</a>
+      <a href="hw2part1.html" class="btn btn-info" role="button">HW2 Part 1</a>
+      <a href="hw2part2.html" class="btn btn-info" role="button">HW2 Part 2</a>
+      <a href="hw2part3.html" class="btn btn-info active" role="button">HW2 Part 3</a>
+      <section class="panel panel-primary">
+        <div class="panel-heading"><h3>Monetary Exchange Rates</h3></div>
+        <div class="panel-body">
+          <div id="flip">Click Here to Show/Hide Instructions</div>
+          <div id="panel">
+            <p>The foreign exchange rates in <strong>June 2021</strong><br>
+              <strong>Enter</strong> a dollar amount in the table below to see the corresponding foreign exchange values.
+            </p>
           </div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Currency</th>
+                <th>Rate</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Euro</td>
+                <td id="eurrate">0.84</td>
+                <td id="eurval"> </td>
+              </tr>
+              <tr>
+                <td>Canadian Dollar</td>
+                <td id="cadrate">1.23</td>
+                <td id="cadval"> </td>
+              </tr>
+              <tr>
+                <td>Hong Kong Dollar</td>
+                <td id="hkdrate">7.76</td>
+                <td id="hkdval"> </td>
+              </tr>
+              <tr>
+                <td>Japanese Yen</td>
+                <td id="jpyrate">110.80</td>
+                <td id="jpyval"> </td>
+              </tr>
+              <tr>
+                <td>Mexican Peso</td>
+                <td id="mxnrate">19.82</td>
+                <td id="mxnval"> </td>
+              </tr>
+            </tbody>
+          </table>
+          <form class="form-inline" name="entryform">
+            <div class="form-group">
+              <label for="usamt">Enter Amount of U.S. Dollars</label>
+              <input type="number" class="form-control active" id="usamt" placeholder="Enter Amount" autofocus>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="process()">Calculate</button>
+            <button type="reset" class="btn btn-outline-secondary" onclick="resetResult()">Reset</button>
+          </form>
+          <p id="msg" class="bg-danger"></p>             
         </div>
-      </div>
-    </div>    
+      </section>
+    </main>    
 
 
   </body>
