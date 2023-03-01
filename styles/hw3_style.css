@@ -24,8 +24,8 @@
 
 input[type=number] {
 	width: 30%;
-	padding: 12px 20px;
-	margin: 8px 0;
+	padding: 12px;
+	margin: 8px;
   text-align: right;
 	box-sizing: border-box;
 }
