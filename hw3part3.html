@@ -81,13 +81,9 @@
           <form id="temperature" name="temperature">
             <h4><strong>Temperature Input</strong></h4>
             <p id="msgtemp" class="bg-danger"></p>
-            <table>
-              <tr>
-                <td><label class="col-sm-4" for="tempval">Temperature</label></td>
-                <td><input type="number" class="form-control col-sm-5" id="tempval" name="tempval" placeholder="Temperature" autofocus></td>
-              </tr>
-            </table>
-            <br>
+            <label for="tempval">Temperature</label><br>
+            <input type="number" id="tempval" name="tempval" placeholder="Temperature" autofocus>
+            <br><br>
             <button type="button" class="btn btn-primary" onclick="calculateCelcius()">Farenheit to Celcius</button>
             <button type="button" class="btn btn-success" onclick="calculateFarenhait()">Celcius to Farenheit</button>
             <button type="reset" class="btn btn-outline-secondary" onclick="resetTemperature()">Clear Result</button>
