@@ -31,20 +31,19 @@ input[type=text] {
 }
 
 
-table {
-  width: 60%;
-}
-th {
-  text-align: center;
-  width: 20%;
-}
-
-td {
-  text-align: right;
-}
-
-
 hr.green {
   border: 1px solid green;
 }
 
+span { 
+    font-size: 280%; 
+    text-indent: 200px;
+}
+
+p.big {
+    line-height: 1.8;
+}
+
+p.small {
+    line-height: 0.9;
+}

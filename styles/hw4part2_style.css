@@ -39,6 +39,8 @@ th {
   width: 20%;
 }
 
+tr:nth-child(even) {background-color: #b9c5e6;}
+
 td {
   text-align: right;
 }
@@ -47,4 +49,5 @@ td {
 hr.green {
   border: 1px solid green;
 }
+
 
