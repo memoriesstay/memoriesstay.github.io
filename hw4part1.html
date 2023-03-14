@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CNIT 133 HW4</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Homework 4 for JavaScript, jQuery, AJAX course at CCSF">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/hw4_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
+  <script src="scripts/hw4part1_script.js" defer></script>
+</head>
+
+<body onload="process()" style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
+  <!-- Header Section -->
+  <header class="jumbotron text-center" id="main-header">
+    <h1>CNIT 133 Homework 4 - Looping Statements</h1>
+  </header>
+
+  <!-- Nav Section -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid navbar-header">
+      <!-- Small window side collapsing menu -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>    
+      </button>
+      <a class="navbar-brand">CNIT 133</a>
+      <ul class="collapse navbar-collapse nav navbar-nav" id="myNavbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">Homework 2</a></li>
+        <li><a href="hw3.html">Homework 3</a></li>
+        <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw4.html">Homework 4<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="hw4.html">HW4 Main</a></li>
+                <li><a href="hw4part1.html">HW4 Part 1</a></li>
+                <li><a href="hw4part2.html">HW4 Part 2</a></li>
+                <li><a href="hw4part3.html">HW4 Part 3</a></li>
+            </ul>
+          </li>        <li><a href="hw5.html">Homework 5</a></li>
+        <li><a href="hw6.html">Homework 6</a></li>
+        <li><a href="hw7.html">Homework 7</a></li>
+        <li><a href="hw8.html">Homework 8</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN Body Content -->
+  <main class="container panel-group">
+    
+    <nav id="top">
+      <a href="hw4.html" class="btn btn-primary" role="button">Main</a>
+      <a href="hw4part1.html" class="btn btn-primary active" role="button">Part 1</a>
+      <a href="hw4part2.html" class="btn btn-primary" role="button">Part 2</a>
+      <a href="hw4part3.html" class="btn btn-primary" role="button">Part 3</a>
+    </nav><br>
+
+    <section id="part1" class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Part 1: Sum and Product Calculation</h3>
+      </div>
+      <div class="panel-body">
+        <p>Below is the sum and product of every fourth integer from 5 to 25.  Script calculates the results using the <strong>for loop statement</strong>.</p><br>
+        <p id="sum4"></p>
+        <p id="product4"></p>
+      </div>
+      <hr class="green">
+      <div class="panel-body">
+        <p>Below is the sum and product of every third integer from 3 to 18.  Script calculates the results using <strong>while loop statement</strong></p><br>
+
+        <p id="sum3"></p>
+        <p id="product3"></p>
+      </div>
+      <div id="draggable" class="ui-widget-content container_img">
+        <img src="images/sunflex.gif" alt="Drag Me Anywhere"  style="width:200px;height:200px;">
+        <div class="centered">Drag Me Around</div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>

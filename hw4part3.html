@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CNIT 133 HW4</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Homework 4 for JavaScript, jQuery, AJAX course at CCSF">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/hw4part3_style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
+  <script src="scripts/hw4part3_script.js" defer></script>
+</head>
+
+<body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
+  <!-- Header Section -->
+  <header class="jumbotron text-center" id="main-header">
+    <h1>CNIT 133 Homework 4 - Looping Statements</h1>
+  </header>
+
+  <!-- Nav Section -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid navbar-header">
+      <!-- Small window side collapsing menu -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>    
+      </button>
+      <a class="navbar-brand">CNIT 133</a>
+      <ul class="collapse navbar-collapse nav navbar-nav" id="myNavbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">Homework 2</a></li>
+        <li><a href="hw3.html">Homework 3</a></li>
+        <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw4.html">Homework 4<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="hw4.html">HW4 Main</a></li>
+                <li><a href="hw4part1.html">HW4 Part 1</a></li>
+                <li><a href="hw4part2.html">HW4 Part 2</a></li>
+                <li><a href="hw4part3.html">HW4 Part 3</a></li>
+            </ul>
+          </li>        <li><a href="hw5.html">Homework 5</a></li>
+        <li><a href="hw6.html">Homework 6</a></li>
+        <li><a href="hw7.html">Homework 7</a></li>
+        <li><a href="hw8.html">Homework 8</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN Body Content -->
+  <main class="container panel-group">
+    
+    <nav id="top">
+      <a href="hw4.html" class="btn btn-primary" role="button">Main</a>
+      <a href="hw4part1.html" class="btn btn-primary" role="button">Part 1</a>
+      <a href="hw4part2.html" class="btn btn-primary" role="button">Part 2</a>
+      <a href="hw4part3.html" class="btn btn-primary active" role="button">Part 3</a>
+    </nav><br>
+
+    <section class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Part 3: The Square</h3>
+      </div>
+      <div class="panel-body">
+        <p>What size would you like the square to be?  Enter a number between 2 to 10</p>
+        <form id="drawsquare" name="drawsquare">
+          <p id="msgwrong" class="bg-danger"></p>
+          <p>
+            <label for="usrinput">Enter A Number</label>
+            <input type="number" class="form-control" id="usrinput" name="usrinput" placeholder="Enter A Number" autofocus">
+          </p>
+          <br>
+          <button type="button" id="submitButton" class="btn btn-primary" onclick="process()">Submit</button>
+          <button type="reset" class="btn btn-outline-secondary" onclick="resetResult()">Clear Result</button>
+          <hr class="green"><br>
+          <p class="small" id="displaysquare">
+
+          </p>
+        </form>
+        <script>
+
+
+        </script>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+
+</html>

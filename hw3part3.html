@@ -14,7 +14,7 @@
   <!-- <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js" defer></script> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" defer></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
-  <script src="scripts/hw3_script.js" defer></script>
+  <script src="scripts/hw3part3_script.js" defer></script>
 </head>
 
 <body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
@@ -35,14 +35,7 @@
       <a class="navbar-brand">CNIT 133</a>
       <ul class="collapse navbar-collapse nav navbar-nav" id="myNavbar">
         <li><a href="index.html">Home</a></li>
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw2.html">Homework 2<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="hw2.html">HW2 Main</a></li>
-            <li><a href="hw2part1.html">HW2 Part 1</a></li>
-            <li><a href="hw2part2.html">HW2 Part 2</a></li>
-            <li><a href="hw2part3.html">HW2 Part 3</a></li>
-          </ul>
-        </li>
+        <li><a href="hw2.html">Homework 2</a></li>
         <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw3.html">Homework 3<span class="caret"></span></a>
           <ul class="dropdown-menu">
               <li><a href="hw3.html">HW3 Main</a></li>
@@ -77,15 +70,15 @@
           <h3>Part 3: Temperature Conversion</h3>
         </div>
         <div class="panel-body">
-          <p>This page contains script that will take user input of temperature, and perform coversion between Farenheit to Celcius, or Celcius to Farenheit.</p>
+          <p>This page contains script that will take user input of temperature, and perform coversion between Farenheit to Celsius, or Celsius to Farenheit.</p>
           <form id="temperature" name="temperature">
             <h4><strong>Temperature Input</strong></h4>
             <p id="msgtemp" class="bg-danger"></p>
             <label for="tempval">Temperature</label><br>
             <input type="number" id="tempval" name="tempval" placeholder="Temperature" autofocus>
             <br><br>
-            <button type="button" class="btn btn-primary" onclick="calculateCelcius()">Farenheit to Celcius</button>
-            <button type="button" class="btn btn-success" onclick="calculateFarenhait()">Celcius to Farenheit</button>
+            <button type="button" class="btn btn-primary" onclick="calculateCelsius()">Farenheit to Celsius</button>
+            <button type="button" class="btn btn-success" onclick="calculateFarenhait()">Celsius to Farenheit</button>
             <button type="reset" class="btn btn-outline-secondary" onclick="resetTemperature()">Clear Result</button>
             
             <hr class="green">
