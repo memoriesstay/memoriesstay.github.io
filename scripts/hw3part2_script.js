@@ -6,6 +6,7 @@ function saleCommission()
 
   // Read in the 4 numbers: item1, item2, item3, item4
   var qty1, qty2, qty3, qty4, errMsg, price1, price2, price3, price4, salerep;
+  var o = { style: "currency", currency: "USD", currencyDisplay:"symbol"};
   qty1 = parseInt(document.forms["sale"].elements["item1"].value);
   qty2 = parseInt(document.forms["sale"].elements["item2"].value);
   qty3 = parseInt(document.forms["sale"].elements["item3"].value);
@@ -38,13 +39,18 @@ function saleCommission()
     document.getElementById("qty3").innerHTML = qty3;
     document.getElementById("qty4").innerHTML = qty4;
 
-    document.getElementById("total1").innerHTML = total1.toFixed(2);
-    document.getElementById("total2").innerHTML = total2.toFixed(2);
-    document.getElementById("total3").innerHTML = total3.toFixed(2);
-    document.getElementById("total4").innerHTML = total4.toFixed(2);
+    // document.getElementById("total1").innerHTML = total1.toFixed(2);
+    // document.getElementById("total2").innerHTML = total2.toFixed(2);
+    // document.getElementById("total3").innerHTML = total3.toFixed(2);
+    // document.getElementById("total4").innerHTML = total4.toFixed(2);
 
-    document.getElementById("totalsold").value = formatNumber(totalSold.toFixed(2));
-    document.getElementById("totalearn").value = formatNumber(totalEarn.toFixed(2));
+    document.getElementById("total1").innerHTML = total1.toLocaleString("en", o);
+    document.getElementById("total2").innerHTML = total2.toLocaleString("en", o);
+    document.getElementById("total3").innerHTML = total3.toLocaleString("en", o);
+    document.getElementById("total4").innerHTML = total4.toLocaleString("en", o);
+
+    document.getElementById("totalsold").value = totalSold.toLocaleString("en", o);
+    document.getElementById("totalearn").value = totalEarn.toLocaleString("en", o);
     document.getElementById('totalearn').scrollIntoView();
   }
 

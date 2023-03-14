@@ -1,5 +1,5 @@
-// calculateCelcius() read in user input and then perform temperature conversion.
-function calculateCelcius() {
+// calculateCelsius() read in user input and then perform temperature conversion to Celsius
+function calculateCelsius() {
   resetTemperature(); // To ensure previous run result is clear out.
   // Read in temperature
   var tempValue, result, errMsg;
@@ -12,6 +12,24 @@ function calculateCelcius() {
     result = Math.round(5/9 * (tempValue - 32));
     document.getElementById("textresult").value = tempValue + "\u00B0 Fahrenheit is "  + result + "\u00B0 Celsious.";
   }
+}
+
+// calculateFarenhait() read in user input and then perform temperature conversion to Celsius
+function calculateFarenhait() {
+  // resetSaleComResult(); // To ensure previous run result is clear out.
+
+  // Read in temperature
+  var tempValue, result, errMsg;
+  tempValue = parseInt(document.forms["temperature"].elements["tempval"].value);
+  //Formula: F = (9/5 * C) + 32, where C is the input value.
+  if(isNaN(tempValue)) {
+    errMsg = "Please enter a value for temperature.";
+    document.getElementById("msgtemp").innerHTML = errMsg;
+  } else {
+    result = Math.round((9/5 * tempValue) + 32);
+    document.getElementById("textresult").value = tempValue + "\u00B0 Celsious is "  + result + "\u00B0 Fahrenheit";
+  }
+
 }
 
 function resetTemperature() {
