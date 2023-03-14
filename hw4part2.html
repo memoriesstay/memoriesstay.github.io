@@ -64,12 +64,12 @@
       </div>
       <div class="panel-body">
         <p><strong>Compound interest</strong> is the interest paid on the orignal principal and on the accumulated past interest.  Below you will see three tables
-          displaying compound interest for 5%, 6%, and 7% with the initial deposit over 5 years period.
+          displaying compound interest for 5%, 6%, and 7% with the initial deposit of $1,000 over 5 years term.
         </p><br>
         <script>
             var intList = [0.05,0.06,0.07], heederMsg,tableHeading, tableBody;
             var amount, principal, intInPct; //A = P(1 + r) to power n
-
+            var o = { style: "currency", currency: "USD", currencyDisplay:"symbol"};
             for (let curInterest of intList) {
                 intInPct = Math.round(curInterest * 100);
                 principal=1000; //Initial Deposit
@@ -77,9 +77,10 @@
                 tableHeading = '<table class="table table-striped table-hover">' + '<thead><tr>  <th>Year<\/th>  <th>Amount on deposit<\/th>  <th>Interest Rate<\/th><\/tr><\/thead>';
                 tableBody = '<tbody>';
                 for(var i=1; i<=5; i++){
-                    amount = (principal * Math.pow((1 + curInterest), i)).toFixed(2);
+                    // amount = (principal * Math.pow((1 + curInterest), i)).toFixed(2);
+                    amount = principal * Math.pow((1 + curInterest), i);
                     // principal = amount;
-                    tableBody = tableBody + '<tr><td>' + i + '<\/td><td>' + amount.toLocaleString() + '<\/td><td>' + curInterest + '<\/td><\/tr>';
+                    tableBody = tableBody + '<tr><td>' + i + '<\/td><td>' + amount.toLocaleString("en", o) + '<\/td><td>' + curInterest + '<\/td><\/tr>';
 
                 }
                 tableBody = tableBody + '<\/tbody><\/table>';
