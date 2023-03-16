@@ -37,13 +37,22 @@ hr.green {
 
 span { 
     font-size: 280%; 
-    text-indent: 200px;
+    /* text-indent: 200px; */
 }
 
 p.big {
     line-height: 1.8;
 }
 
+/* p.small {
+
+    line-height: 0.7;
+} */
+
 p.small {
-    line-height: 0.9;
+    display: block; 
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 3rem;
 }
