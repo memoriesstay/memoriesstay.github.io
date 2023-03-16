@@ -21,24 +21,25 @@ function process()
             for(var col=0; col<usrValue; col++) {
                 //if 1st and last row, all *
                 if(row == 0 || row == (usrValue - 1)) {
-                    drawSquare = drawSquare + "*&nbsp;&nbsp;";
+                  drawSquare = drawSquare + "*&nbsp;";
                 } else {
                     //* for first and last column
                     if(col==0) {
-                        drawSquare = drawSquare + "*&nbsp;&nbsp;";
+                        drawSquare = drawSquare + "*&nbsp;";
                     } else if(col == (usrValue - 1)) {
-                        drawSquare = drawSquare + "&nbsp;&nbsp;*";
+                        drawSquare = drawSquare + "*";
                     } else {
                         //draw a space
-                        drawSquare = drawSquare + "&nbsp;&nbsp;&nbsp";
+                        drawSquare = drawSquare + "&nbsp;&nbsp;";
                     }
                 }
 
             }
-            drawSquare = drawSquare + "<br>";
+            drawSquare = drawSquare.replace(/&nbsp;$/,'') + "<br>";
         }
 
-        document.getElementById("displaysquare").innerHTML = "<span>" + drawSquare + "</span>";
+        document.getElementById("displaysquare").innerHTML = drawSquare;
+        // console.log("drawSquare: " + drawSquare);
 
       }
 
