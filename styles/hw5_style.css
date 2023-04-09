@@ -1,0 +1,61 @@
+#main-header {
+    text-align: center;
+    background: rgb(216, 196, 14);
+    color: white;
+    padding: 10px;
+}
+
+#main-footer {
+    text-align: center;
+    font-size: 18px;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #afb0eb;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 10px;
+    display: none;
+}
+
+input[type=text] {
+  text-align: right;
+	width: 30%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+
+table {
+  width: 60%;
+}
+th {
+  text-align: center;
+  width: 20%;
+}
+
+td {
+  text-align: right;
+}
+
+
+hr.green {
+  border: 1px solid green;
+}
+
+.container_img {
+  position: relative;
+  text-align: center;
+  color: rgb(206, 185, 245);
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
