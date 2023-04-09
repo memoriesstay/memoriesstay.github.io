@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CNIT 133 HW5</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Homework 4 for JavaScript, jQuery, AJAX course at CCSF">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/hw5part1_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
+   <!-- jQuery validate -->
+   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.min.js" defer></script>
+  <script src="scripts/hw5part2_script.js" defer></script>
+</head>
+
+<body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
+  <!-- Header Section -->
+  <header class="jumbotron text-center" id="main-header">
+    <h1>CNIT 133 Homework 5 - Arrays</h1>
+  </header>
+
+  <!-- Nav Section -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid navbar-header">
+      <!-- Small window side collapsing menu -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>    
+      </button>
+      <a class="navbar-brand">CNIT 133</a>
+      <ul class="collapse navbar-collapse nav navbar-nav" id="myNavbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hw2.html">Homework 2</a></li>
+        <li><a href="hw3.html">Homework 3</a></li>
+        <li><a href="hw4.html">Homework 4</a></li>
+        <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw5.html">Homework 5<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="hw5.html">HW5 Main</a></li>
+              <li><a href="hw5part1.html">HW5 Part 1</a></li>
+              <li><a href="hw5part2.html">HW5 Part 2</a></li>
+              <li><a href="hw5part3.html">HW5 Part 3</a></li>
+          </ul>
+        </li>
+        <li><a href="hw6.html">Homework 6</a></li>
+        <li><a href="hw7.html">Homework 7</a></li>
+        <li><a href="hw8.html">Homework 8</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN Body Content -->
+  <main class="container panel-group">
+    
+    <nav id="top">
+      <a href="hw5.html" class="btn btn-primary" role="button">Main</a>
+      <a href="hw5part1.html" class="btn btn-primary" role="button">Part 1</a>
+      <a href="hw5part2.html" class="btn btn-primary active" role="button">Part 2</a>
+      <a href="hw5part3.html" class="btn btn-primary" role="button">Part 3</a>
+    </nav><br>
+
+    <section id="part1" class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Part 2: Dropdown Menu - Instant vs. Button</h3>
+      </div>
+      <div class="panel-body">
+        <p>Either you would like to instantly go to your selected Shopping site, 
+          or press the Go button to open a new tab to your selected restaurants, the below Dropdown menus will give 
+          you both instant or the Go button experience.</p>
+          <form id="instantform" name="instantform" class="container">
+            <p >
+              <label for="vendor">Where would you like to shop today?</label>
+              <select name="vendor" id="vendor" onchange="window.open(this.value)">
+              <!-- <select name="vendor" id="vendor1" onchange="goToNewPage(this.form);">   -->
+                <option selected disabled value="">--Choose One--</option>
+                <option value="https://www.amazon.com">Amazon</option>
+                <option value="https://www.bestbuy.com">Best Buy</option>
+                <option value="https://www.costco.com">Costco</option>
+              </select>
+            </p>
+          </form>
+          <form id="buttonform" name="buttonform" class="container">
+              <label for="res_list">Where would you like to eat for dinner?</label>
+              <select name="res_list" id="res_list">
+                <option selected disabled value="">--Choose One--</option>
+                <option value="https://www.misterjius.com">Mister Jiu's</option>
+                <option value="https://slanteddoor.com">The Slanted Door</option>
+                <option value="http://www.goldenboypizza.com">Golden Boy Pizza</option>
+                <option value="https://daehokalbijjim.com/">Daeho Kalbijjim</option>
+              </select>
+
+            <input type="button" value="Go" onclick="goToNewPage(this.form)">
+  
+          </form> <br>
+      </div>
+
+    </section>
+  </main>
+
+</body>
+
+</html>
