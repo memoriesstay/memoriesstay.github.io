@@ -16,35 +16,36 @@ function process()
       ]
 
     var usr_input = (document.getElementById('state').value).toUpperCase();
-    var stateList="", shouldSkip=false;
+    var stateList="", matchedFound=false;
     var result = "Sorry, we do not have information about this state!  We only have information for State: ";
     console.log("User Input: " + usr_input);
+    var curData;
 
     // Find a matched
-    census_data.forEach(function (curData){
-      if(shouldSkip) {
-        //Do nothing
-
-      } else {
-        stateList += curData[1] + " - " + curData[0] + ", "; //Keep track of the State list
-        //Compare until found item looking for.
-        if(curData[0].toUpperCase() == usr_input || curData[1].toUpperCase() == usr_input) {
-          matchedFound = curData;
-          //Overrite the result as matched is found
-          result = "Thanks for your inquiry, here is the information you requested: <br>" +
-          '<table class="table table-striped table-hover">' + 
-          '<thead><tr>  <th>State Abbr<\/th>  <th>State Name<\/th>  <th>Capital<\/th>  <th>Population<\/th><\/tr><\/thead>' +
-          '<tr><td>' + curData[0] + '<\/td><td>' + curData[1] + '<\/td><td>' + curData[2] + '<\/td><td>' + curData[3].toLocaleString() + '<\/td><\/tr>';
-          shouldSkip = true; //Item found so, skip comparing.
-        }
+    for (var i = 0; i< census_data.length; i++) {
+      curData = census_data[i];
+      stateList += curData[1] + " - " + curData[0] + ", "; //Keep track of the State list
+      //Compare until found item looking for.
+      if(curData[0].toUpperCase() == usr_input || curData[1].toUpperCase() == usr_input) {
+        //Overrite the result as matched is found
+        result = "Thanks for your inquiry, here is the information you requested: <br>" +
+        '<table class="table table-striped table-hover">' + 
+        '<thead><tr>  <th>State Abbr<\/th>  <th>State Name<\/th>  <th>Capital<\/th>  <th>Population<\/th><\/tr><\/thead>' +
+        '<tr><td>' + curData[0] + '<\/td><td>' + curData[1] + '<\/td><td>' + curData[2] + '<\/td><td>' + curData[3].toLocaleString() + '<\/td><\/tr>';
+        matchedFound = true;
+        break; //Break out of the loop once match is found.
       }
-    });
-    if(!shouldSkip) {
+      
+    }
+
+    if(!matchedFound) {
+      //If not found, append mesage with the list of States we have data for.
       result += stateList.substring(0, (stateList.length - 2)) + ".";
     }
     
     document.getElementById("result").innerHTML = result;
   } else {
+    //Display error message when user didn't provide required input data.
     document.getElementById("msg").innerHTML = ("Please enter State Name in Full or Abbreviation.");
   }
 
@@ -89,6 +90,7 @@ $(document).ready(function(){
    });
   });
 
+  //Enable enter key to act like clicking on Submit Button
   $('#state').keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
