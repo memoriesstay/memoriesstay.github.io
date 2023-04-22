@@ -1,6 +1,6 @@
 
-// process() - check for valid entry.  If valid, it will display different type of  math rounding connversions, 
-// squareroot of the entry
+// process() - check for valid entry.  If valid, the given phone number split into 3 parts: 
+// areacode, phone prefix, and phone line.
 function process()
 {
   //Clear previous result if any.
