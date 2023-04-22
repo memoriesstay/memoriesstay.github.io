@@ -1,0 +1,28 @@
+#main-header {
+  text-align: center;
+  background: rgb(216, 196, 14);
+  color: white;
+  padding: 10px;
+}
+
+#main-footer {
+  text-align: center;
+  font-size: 18px;
+}
+
+
+hr.green {
+border: 1px solid green;
+}
+
+.black {
+color: black;
+}
+
+
+/* style error msg */
+/* .err { color: red; font-style: italic; font-size: 10px;} */
+
+.error {
+  color: red; font-style: italic; font-size: 14px;
+}
