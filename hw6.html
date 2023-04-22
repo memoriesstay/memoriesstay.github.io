@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Homework 6 for JavaScript, jQuery, AJAX course at CCSF">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/hw2_style.css">
+    <link rel="stylesheet" href="styles/hw6_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
   </head>
-
   <body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
     <!-- Header Section -->
     <header class="jumbotron text-center" id="main-header">
@@ -33,23 +32,37 @@
           <li><a href="hw3.html">Homework 3</a></li>
           <li><a href="hw4.html">Homework 4</a></li>
           <li><a href="hw5.html">Homework 5</a></li>
-          <li class="active"><a href="hw6.html">Homework 6</a></li>
+          <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw6.html">Homework 6<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="hw6.html">HW6 Main</a></li>
+                <li><a href="hw6part1.html">HW6 Part 1</a></li>
+                <li><a href="hw6part2.html">HW6 Part 2</a></li>
+                <li><a href="hw6part3.html">HW6 Part 3</a></li>
+            </ul>
+          </li>
           <li><a href="hw7.html">Homework 7</a></li>
           <li><a href="hw8.html">Homework 8</a></li>
         </ul>
       </div>
     </nav>
-    <main class="container">
-      <div class="panel-group">
-        <div class="panel panel-primary">
-          <div class="panel-heading"><h3>Coming Soon</h3></div>
-          <div class="panel-body">
-            <p>Thanks for visiting.  Come back soon</p>
 
-
-          </div>
+    <!-- MAIN Body Content -->
+    <main class="container panel-group">
+      <section class="panel panel-info">
+        <div class="panel-heading"><h3>Objects</h3></div>
+        <div class="panel-body">
+          <p><strong>Homework 6</strong> contains 3 required programs, working on Math object, 
+            regular expressions, masking, named capture groups, and open a new window along with document write.</p>
+          <dl>
+            <dt><a href="hw6part1.html" class="btn btn-info" role="button">HW6 Part 1</a></dt>
+              <dd><p>Viewing a number with 4 decimals or more as whole number, square-root with whole number, rounding to tenth, hundredth and thousandth.</p></dd>
+            <dt><a href="hw6part2.html" class="btn btn-info" role="button">HW6 Part 2</a></dt>
+              <dd><p> Display total matched found in current window.  Otherwise, display searched character not found in a new window of 300 pixels by 100 pixels.</p></dd>
+            <dt><a href="hw6part3.html" class="btn btn-info" role="button">HW6 Part 3</a></dt>
+              <dd><p>Takes the provided phone number and displays it without hyphen nor parentheses.  Script will use masking, and named capture grouping.</p></dd>
+          </dl>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>
