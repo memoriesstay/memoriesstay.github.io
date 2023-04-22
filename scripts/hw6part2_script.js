@@ -48,7 +48,12 @@ function search()
       htmlSource += "</body>\n";
       htmlSource += "</html>\n";
 
-      var newWindow = window.open("", "new_window", "top=100,left=100,width=200,height=120");
+      //Using the current window position as a relative starting point.
+      var x = window.screenX + 100;
+      var y = window.screenY + 100;
+      // console.log("x: " + x + ". y: " + y);
+
+      var newWindow = window.open("", "new_window", "top="+ y +",left=" + x + ",width=200,height=120");
       newWindow.opener = null; //For security
       newWindow.focus();
       newWindow.document.write(htmlSource); //display message on new popup window.
