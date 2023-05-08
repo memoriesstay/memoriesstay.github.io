@@ -1,0 +1,77 @@
+#main-header {
+    text-align: center;
+    background: rgb(216, 196, 14);
+    color: white;
+    padding: 10px;
+}
+
+#main-footer {
+    text-align: center;
+    font-size: 18px;
+}
+
+#panel, #flip {
+    padding: 5px;
+    text-align: left;
+    background-color: #afb0eb;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 10px;
+    display: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+
+hr.green {
+  border: 1px solid green;
+}
+
+h4 {
+    background: url('../images/open.png') no-repeat 0 11px;
+}
+
+h2 {
+	background: url('../images/open.png') no-repeat 0 11px;
+	padding: 10px 0 0 25px;
+    background-color: #babac5;
+    border: solid 1px #a5b6aa;
+	cursor: pointer;
+}
+h2.close {
+    text-align: left;
+	background-image: url('../images/close.png');
+    padding: 10px;
+
+}
+.answer {
+	margin-left: 25px;	
+}
+
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: rgb(75, 30, 238);         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown-menu{
+    margin-top: 0;
+}
+
+.hidden {
+    display:none;
+}

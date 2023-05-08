@@ -1,0 +1,73 @@
+#main-header {
+    text-align: center;
+    background: rgb(216, 196, 14);
+    color: white;
+    padding: 10px;
+}
+
+#main-footer {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+hr.green {
+  border: 1px solid green;
+}
+
+/* .panel-body {
+    background:#E6E6FA;} */
+.lavender {
+    background-color: #E6E6FA;
+    padding: 10px;
+}
+
+.gold {
+    background-color: #FFD700;
+    padding: 10px;
+}
+
+.ligthpink {
+    background-color: #FFB6C1;
+    padding: 10px;
+}
+
+.origcolor {
+    background-color: #FFFFFF;
+    padding: 10px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.normal {
+    font-weight: normal;
+    font-style: normal;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.small {
+    /* font-size: 10px; */
+    font-size: 0.9em;
+}
+.medium {
+    font-size: 1.1em;
+}
+.large {
+    font-size: 1.5em;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown-menu{
+    margin-top: 0;
+}

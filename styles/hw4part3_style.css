@@ -56,3 +56,10 @@ p.small {
     font-family: 'Courier New', Courier, monospace;
     line-height: 3rem;
 }
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown-menu{
+    margin-top: 0;
+}

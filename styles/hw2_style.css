@@ -33,3 +33,9 @@ input[type=number]:focus {
 	background-color: rgb(233, 209, 159);
 }
 
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown-menu{
+    margin-top: 0;
+}
