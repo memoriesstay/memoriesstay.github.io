@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CNIT 133 HW2</title>
+    <title>CNIT 133 HW7</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Homework 2 Basic Operation for JavaScript, jQuery, AJAX course at CCSF">
+    <meta name="description" content="Homework 7 for JavaScript, jQuery, AJAX course at CCSF">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/hw2_style.css">
+    <link rel="stylesheet" href="styles/hw7part2_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
+    <script src="scripts/hw7part2_script.js" defer></script>
   </head>
-
   <body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
     <!-- Header Section -->
     <header class="jumbotron text-center" id="main-header">
-      <h1>CNIT 133 Homework 2</h1>
+      <h1>CNIT 133 Homework 7</h1>
     </header>
-
+ 
     <!-- Nav Section -->
     <nav class="navbar navbar-default">
       <div class="container-fluid navbar-header">
@@ -27,9 +27,9 @@
           <span class="icon-bar"></span>    
         </button>
         <a class="navbar-brand">CNIT 133</a>
-        <ul class="collapse navbar-collapse nav navbar-nav" id="myNavbar">
+        <ul class="nav navbar-nav" id="myNavbar">
           <li><a href="index.html">Home</a></li>
-          <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw2.html">Homework 2<span class="caret"></span></a>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw2.html">Homework 2<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="hw2.html">HW2 Main</a></li>
               <li><a href="hw2part1.html">HW2 Part 1</a></li>
@@ -56,7 +56,7 @@
         </li>
           <li><a href="hw5.html">Homework 5</a></li>
           <li><a href="hw6.html">Homework 6</a></li>
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw7.html">Homework 7<span class="caret"></span></a>
+          <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw7.html">Homework 7<span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a href="hw7.html">HW7 Main</a></li>
                 <li><a href="hw7part1.html">HW7 Part 1</a></li>
@@ -67,33 +67,29 @@
         </ul>
       </div>
     </nav>
- 
-    <!-- MAIN Body Content -->
-    <main class="container panel-group">
-      <h2>Part 1: Formatting</h2> 
-      <a href="hw2.html" class="btn btn-info" role="button">HW2 Main</a>
-      <a href="hw2part1.html" class="btn btn-info active" role="button">HW2 Part 1</a>
-      <a href="hw2part2.html" class="btn btn-info" role="button">HW2 Part 2</a>
-      <a href="hw2part3.html" class="btn btn-info" role="button">HW2 Part 3</a>
-      <section class="panel panel-primary">
-        <div class="panel-heading"><h3>Font Styling</h3></div>
-        <div class="panel-body">
-          <p>This page contains script that will display</p>
-          <ul>
-            <li>xy in red bold "Times New Roman" font</li>
-            <li>12 in blue Arial font</li>
-            <li>89 in green Impact font</li>
-          </ul>
-          <p>on 1 line with space in between.</p>
-          <script>
-            document.write("<p><strong style=\"color: red; font-family: \"Times New Roman\";\">xy </strong>");
-            document.write("<span style=\"color: blue; font-family: Arial;\">12</span> ");
-            document.write("<span style=\"color: green; font-family: Impact; font-style: italic\">89 <span></p>");
-          </script>
-        </div>
-      </section>
-    </main>    
 
+<!-- MAIN Body Content -->
+<main class="container panel-group">
+    
+  <nav id="top">
+    <a href="hw7.html" class="btn btn-primary" role="button">Main</a>
+    <a href="hw7part1.html" class="btn btn-primary" role="button">Part 1</a>
+    <a href="hw7part2.html" class="btn btn-primary active" role="button">Part 2</a>
+  </nav><br>
+
+  <section id="part1" class="panel panel-primary">
+    <div class="panel-heading">
+      <h3>Part 2: Mouse Hover</h3>
+    </div>
+    <div class="panel-body">
+      <p>Mouse over Homework 2, Homework 3, Homework 4, and Homework 7 to see the menu getting expanded.
+      </p>
+
+
+      </div>
+
+  </section>
+</main>
 
   </body>
 </html>
