@@ -18,7 +18,7 @@ function process()
     sumMsg = sumMsg.slice(0, -1)
     productMsg = productMsg.slice(0, -1);
 
-    //Display Result Final Average Score, and the Letter Grade
+    //Display Result 
     document.getElementById("sum4").innerHTML = "The result of <strong>" + sumMsg + " is " + sum4.toLocaleString() + "</strong>.";
     document.getElementById("product4").innerHTML  = "The result of <strong>" + productMsg + " is " + product4.toLocaleString() + "</strong>.";
 
@@ -40,7 +40,7 @@ function process()
     sumMsg3 = sumMsg3.slice(0, -1)
     productMsg3 = productMsg3.slice(0, -1);
 
-    //Display Result Final Average Score, and the Letter Grade
+    //Display Result
     document.getElementById("sum3").innerHTML = "The result of <strong>" + sumMsg3 + " is " + sum3.toLocaleString() + "</strong>.";
     document.getElementById("product3").innerHTML  = "The result of <strong>" + productMsg3 + " is " + product3.toLocaleString() + "</strong>.";
 
@@ -50,5 +50,11 @@ function process()
 $(document).ready(function(){
 
     $( "#draggable" ).draggable();
- 
+
+    $(".dropdown").hover(function(){
+        var dropdownMenu = $(this).children(".dropdown-menu");
+        if(dropdownMenu.is(":visible")){
+            dropdownMenu.parent().toggleClass("open");
+        }
+    });
 });

@@ -58,4 +58,11 @@ $(document).ready(function(){
     $("#minResult").fadeTo("slow", 0.15);
     $("#maxResult").fadeTo("slow", 0.15);
   });
+  
+  $(".dropdown").hover(function(){
+    var dropdownMenu = $(this).children(".dropdown-menu");
+    if(dropdownMenu.is(":visible")){
+        dropdownMenu.parent().toggleClass("open");
+    }
+});
 });
