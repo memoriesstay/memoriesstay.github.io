@@ -23,7 +23,7 @@ function loadDoc() {
 function myFunction(xml) {
   const xmlDoc = xml.responseXML;
   const x = xmlDoc.getElementsByTagName("CD");
-  let table='<thead><tr>  <th>Artist<\/th>  <th>Title<\/th>  <th>Year<\/th><\/tr><\/thead>';
+  let table='<thead><tr>  <th>Title<\/th>  <th>Artist<\/th>  <th>Year<\/th><\/tr><\/thead>';
 
   var curYear = new Date().getFullYear();
 
@@ -32,9 +32,9 @@ function myFunction(xml) {
     x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue = curYear;
 
     table += "<tr><td>" +
-    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-    "</td><td>" +
     x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
     "</td><td>" +
     x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
     "</td></tr>";
