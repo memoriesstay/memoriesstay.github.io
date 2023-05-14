@@ -23,12 +23,21 @@ function loadDoc() {
 function myFunction(xml) {
   const xmlDoc = xml.responseXML;
   const x = xmlDoc.getElementsByTagName("CD");
-  let table="<tr><th>Artist</th><th>Title</th></tr>";
+  let table='<table class="table table-striped table-hover">' + 
+  '<thead><tr>  <th>Artist<\/th>  <th>Title<\/th>  <th>Year<\/th><\/tr><\/thead>';
+
+  var curYear = new Date().getFullYear();
+
   for (let i = 0; i <x.length; i++) { 
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue = "Angel Chung";
+    x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue = curYear;
+
     table += "<tr><td>" +
     x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
     "</td><td>" +
     x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td></tr>" +
+    x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
     "</td></tr>";
   }
 
