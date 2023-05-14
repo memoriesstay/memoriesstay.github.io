@@ -36,10 +36,12 @@ function myFunction(xml) {
     x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
     "</td><td>" +
     x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-    "</td></tr>" +
+    "</td><td>" +
     x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
     "</td></tr>";
   }
+
+  table += "</table>";
 
   console.log(table);
   document.getElementById("demo").innerHTML = table;
