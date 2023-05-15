@@ -61,7 +61,7 @@ function displayMeme(xmlhttp) {
 	  var json = xmlhttp.responseText;   // the responseText is where the data is stored 
     var memeResult = JSON.parse(json);  // here we are turning the string JSON into a native JavaScript object
     var memeList = memeResult.data.memes;
-    console.log(memeList);
+    // console.log(memeList);
     var memeLength = memeList.length;
     var randNumber = Math.floor(Math.random() * memeLength);
     console.log("Length: " + memeLength + ". Random Number: " + randNumber);
