@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Homework 7 for JavaScript, jQuery, AJAX course at CCSF">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/hw7_style.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <link rel="stylesheet" href="styles/hw8_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
     <script src="scripts/hw8_script.js" defer></script>
   </head>
-  <body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
+  <body onload="getMeme()" style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
     <!-- Header Section -->
     <header class="jumbotron text-center" id="main-header">
-      <h1>CNIT 133 Homework 8</h1>
+      <h1>CNIT 133 Homework 8 - AJAX Application</h1>
     </header>
  
     <!-- Nav Section -->
@@ -89,12 +89,38 @@
 
         <div class="panel-body">
 
-            <form id="formatform" name="formatform">
-              <button type="button" id="submitButton" class="btn btn-primary" onclick="loadDoc()">Get CD Collection</button>
-            </form>
-            <br><br>
-            <table id="demo" class="table table-striped"></table>
+          <form id="formatform" name="formatform">
+            <button type="button" id="collection" class="btn btn-primary" onclick="loadDoc()">Get CD Collection</button>
+          </form>
+          <br><br>
+          <table id="demo" class="table table-striped"></table>
     
+          <div>
+          <h4>Explanation of AJAX</h4>
+            <p>This page demonstrates an example of AJAX is used when the <strong>Get CD Collection</strong> button is clicked. A table of song information get displayed through the following:
+              <ul>
+                <li>Creating XMLHttpRequest object to load <strong>cd_catalog.xml</strong>.</li>
+                <li>Defining a Callback function to handle the response with modifying the Artist name to developer name, and year to current year.</li>
+                <li>Sending modified response data in XMLHttpRequest object back to the web server with update without reloading the page.</li>
+              </ul>
+            </p>
+          </div>
+          <div><br>
+            <h4>REST API</h4>
+            <p>Imgflip API returns a list of image memes or provide user ability to add text or caption to mems directly.
+              <ul>
+                <li>Returns Data in <strong>JSON</strong> format.</li>
+                <li>Intergate mems into Slack</li>
+                <li>Automatically caption one of the top 2,048 memes with search_memes api</li>
+                <li>Generates a fresh meme from scratch with ai_meme api</li>
+              </ul><br>
+              The base version of API is free.  The Premium API has a base cost of $9.99 per month.<br>
+              Refer to <a href="https://imgflip.com/api">Imgflip API</a> for detail on API calls and fees.
+            </p> <br>
+            <button type="button" id="memebutton" class="btn btn-primary" onclick="getMeme()">New Image Meme</button><br><br>
+            <figure id="meme">
+            </figure>
+          </div>
         </div>
     
       </section>
