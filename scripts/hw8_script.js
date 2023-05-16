@@ -40,11 +40,12 @@ function myFunction(xml) {
     "</td></tr>";
   }
 
-  console.log(table);
+  // console.log(table);
   document.getElementById("demo").innerHTML = table;
 }
 
 function getMeme() {
+
   var url = 'https://api.imgflip.com/get_memes';
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open('GET', url, false);   // doing a get and the URL will be the URL above
@@ -72,16 +73,18 @@ function displayMeme(xmlhttp) {
       img_width = (memeList[randNumber].width)*0.5;
       img_height = (memeList[randNumber].height)*0.5;
     } else {
+      // use original image size
       img_width = memeList[randNumber].width;
       img_height = memeList[randNumber].height;
     }
 
-    // Display image at a selected random number
+    // Display an image at a selected random number
     document.getElementById('meme').innerHTML = '<img src="' + memeList[randNumber].url + '"  width="' +
     img_width + '" height="' + img_height + '">' + 
       '<figcaption><strong>Image Name:</strong> ' + memeList[randNumber].name + '</figcaption>';
   } else {
     // show an error
+    console.log(">>>Error Occur with Status: " + xmlhttp.status);
   }
 
 }
