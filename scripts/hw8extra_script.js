@@ -37,7 +37,7 @@ function getExchangeRate() {
 }
 
 function displayRates(request) {
-  if(request.status) {  // testing if the request was successful
+  if(request.success) {  // testing if the request was successful
     // show the user details
 	  var json = request.responseText;   // the responseText is where the data is stored 
     var rateResult = JSON.parse(json);  // here we are turning the string JSON into a native JavaScript object
