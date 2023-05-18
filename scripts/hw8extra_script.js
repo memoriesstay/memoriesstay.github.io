@@ -15,24 +15,28 @@ $(document).ready(function(){
 
 function getExchangeRate() {
 
-  var requestURL = 'https://api.exchangerate.host/latest'; 
+  var requestURL = 'https://api.exchangerate.host/latest?base=USD&symbols=USD,EUR,JPY,CNY,CAD'; 
   var request = new XMLHttpRequest(); 
   request.open('GET', requestURL);
   request.responseType = 'json';
-  request.base = 'USD';
-  request.symbols = 'USD,EUR,JPY,CNY,CAD';
-  request.send();
+  // request.base = 'USD';
+  // request.symbols = 'USD,EUR,JPY,CNY,CAD';
+  let body = JSON.stringify({
+    base: "USD",
+    symbols: "USD,EUR,JPY,CNY,CAD"
+  });
+  request.send(body);
 
   request.onload = function() {
     var response = request.response;
     console.log(response);
   }
 
-  displayMeme(request);
+  displayRates(request);
   // console.log(data);  // the previous line and this line are only to debug the program and make sure that we are receiving data!
 }
 
-function displayMeme(request) {
+function displayRates(request) {
   if(request.status === 200) {  // testing if the request was successful
     // show the user details
 	  var json = request.responseText;   // the responseText is where the data is stored 
