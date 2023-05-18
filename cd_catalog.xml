@@ -64,4 +64,12 @@
     <PRICE>8.20</PRICE>
     <YEAR>1987</YEAR>
   </CD>
+  <CD>
+    <TITLE>Because He Lives</TITLE>
+    <ARTIST>Angel Chung</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>CCSF</COMPANY>
+    <PRICE>5.99</PRICE>
+    <YEAR>2023</YEAR>
+  </CD>
 </CATALOG>
