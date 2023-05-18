@@ -25,12 +25,9 @@ function myFunction(xml) {
   const x = xmlDoc.getElementsByTagName("CD");
   let table='<thead><tr>  <th>Title<\/th>  <th>Artist<\/th>  <th>Year<\/th><\/tr><\/thead>';
 
-  var curYear = new Date().getFullYear();
+  // var curYear = new Date().getFullYear();
 
   for (let i = 0; i <x.length; i++) { 
-    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue = "Angel Chung";
-    x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue = curYear;
-
     table += "<tr><td>" +
     x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
     "</td><td>" +
