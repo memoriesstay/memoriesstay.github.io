@@ -10,6 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" defer></script>
+   <!-- jQuery validate -->
+   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.19.2/jquery.validate.min.js" defer></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js" defer></script>
     <script src="scripts/hw8extra_script.js" defer></script>
   </head>
   <body style="background-image:url('images/blueBubblesBG.jpg'); background-color:#73c7ee; background-repeat:no-repeat;">
@@ -67,7 +70,7 @@
         <li class="active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="hw8.html">Homework 8<span class="caret"></span></a>
           <ul class="dropdown-menu">
               <li><a href="hw8.html">HW8 Main</a></li>
-              <li><a href="hw8part1.html">HW8 Extra Credit</a></li>
+              <li><a href="hw8extra.html">HW8 Extra Credit</a></li>
           </ul>
         </li>
         </ul>
@@ -89,8 +92,12 @@
 
         <div class="panel-body">
 
-          <form id="formatform" name="formatform">
-            <button type="button" id="collection" class="btn btn-primary" onclick="getExchangeRate()">Get Latest Exchange Currency</button>
+          <form id="rateform" name="rateform">
+            <div class="form-group">
+              <label for="usamt">Enter Amount of U.S. Dollars</label>
+              <input type="number" class="form-control active" id="usamt" placeholder="Enter Amount" autofocus>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="getExchangeRate()">Get Latest Exchange Currency</button>
           </form>
           <br>
           <div id="rateinfo">
