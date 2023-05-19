@@ -21,3 +21,24 @@
 h4 {
     color:rgb(66, 46, 238);
 }
+
+/* input[type=text] {
+    text-align: right;
+      width: 30%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+  } */
+  
+  
+  table {
+    width: 60%;
+  }
+  th {
+    text-align: center;
+    width: 20%;
+  }
+  
+  td.number {
+    text-align: right;
+  }
