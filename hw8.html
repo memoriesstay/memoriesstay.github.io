@@ -97,27 +97,28 @@
     
           <div>
           <h4>Explanation of AJAX</h4>
-            <p>This page demonstrates an example of AJAX is used when the <strong>Get CD Collection</strong> button is clicked. A table of song information get displayed through the following:
-              <ul>
-                <li>Creating XMLHttpRequest object to load <strong>cd_catalog.xml</strong>.</li>
-                <li>Defining a Callback function, myFunction(xml), to handle the response with modifying the Artist name to developer name, and year to current year, and retrieving title through getElementsByTagName</li>
-                <li>Sending modified response data in XMLHttpRequest object back to the web server with update without reloading the page.</li>
-              </ul> <br>
-              Click on the <strong>Get CD Collection</strong> to view data in the XML file with modification of Artist Name and Year.
+            <p>This page demonstrates an example of AJAX is used when the <strong>Get CD Collection</strong> button is clicked. A table of song information get displayed through the following:</p>
+            <ul>
+              <li>Creating XMLHttpRequest object to load <strong>cd_catalog.xml</strong>.</li>
+              <li>Defining a Callback function, myFunction(xml), to handle the response with modifying the Artist name to developer name, and year to current year, and retrieving title through getElementsByTagName</li>
+              <li>Sending modified response data in XMLHttpRequest object back to the web server with update without reloading the page.</li>
+            </ul> <br>
+            <p> Click on the <strong>Get CD Collection</strong> to view data in the XML file with modification of Artist Name and Year.
             </p>
           </div>
+          <hr class="green">
           <div><br>
             <h4>REST API</h4>
-            <p>Imgflip API returns a list of image memes or provide user ability to add text or caption to mems directly.
-              <ul>
-                <li>Returns Data in <strong>JSON</strong> format.</li>
-                <li>Intergate mems into Slack</li>
-                <li>Automatically caption one of the top 2,048 memes with search_memes api</li>
-                <li>Generates a fresh meme from scratch with ai_meme api</li>
-              </ul><br>
-              The base version of API is free.  The Premium API has a base cost of $9.99 per month.<br>
+            <p>Imgflip API returns a list of image memes or provide user ability to add text or caption to mems directly.</p> 
+            <ul>
+              <li>Returns Data in <strong>JSON</strong> format.</li>
+              <li>Intergate mems into Slack</li>
+              <li>Automatically caption one of the top 2,048 memes with search_memes api</li>
+              <li>Generates a fresh meme from scratch with ai_meme api</li>
+            </ul><br>
+            <p> The base version of API is free.  The Premium API has a base cost of $9.99 per month.<br>
               Refer to <a href="https://imgflip.com/api">Imgflip API</a> for detail on API calls and fees.
-              Click the button below to view randomly select image from Imgflip collection.
+             Click the button below to view randomly select image from Imgflip collection.
             </p> <br>
             <button type="button" id="memebutton" class="btn btn-primary" onclick="getMeme()">New Image Meme</button><br><br>
             <figure id="meme">
