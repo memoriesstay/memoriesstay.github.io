@@ -21,7 +21,7 @@ $(document).ready(function(){
     },
     messages: {
       usamt: {
-        required: "Please US amount for conversion calculation.",
+        required: "Please U.S. currency amount for conversion calculation.",
         number: "Please enter a number."
       }
   
