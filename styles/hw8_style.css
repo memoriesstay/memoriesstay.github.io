@@ -18,6 +18,10 @@
     margin-top: 0;
 }
 
+hr.green {
+    border: 1px solid green;
+}
+
 h4 {
     color:rgb(66, 46, 238);
 }
